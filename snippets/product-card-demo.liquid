@@ -4,7 +4,7 @@
 
 <div>
   {% if product.compare_at_price %}
-    <del>{{ product.compare_at_price | money }}</del>
+    <del class="product-price--compare">{{ product.compare_at_price | money }}</del>
     <span class="product-price--sale">{{ product.price | money }}</span>
   {% else %}
     <span class="product-price">{{ product.price | money }}</span>
