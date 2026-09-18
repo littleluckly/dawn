@@ -1,4 +1,6 @@
 {{ product.media.first | media_tag: 'product-card__media', 'product-card__media--hover' }}
+
+{% render 'product-card-demo' %}
 <script>
   console.log('product', {{ product | json }});
 </script>
