@@ -8,6 +8,7 @@
         | img_tag: product.title
       }}
       {% assign variant_images = product.media | where: 'media_type', 'image' | map: 'src' %}
+      {{ product.options_with_values | json }}
     </div>
     <div class="product-card--medias">
       {% for media in variant_images %}
