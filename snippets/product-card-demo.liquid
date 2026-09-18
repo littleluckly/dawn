@@ -34,6 +34,9 @@
             type="radio"
             id="option-{{ option.position }}-{{ value }}"
             name="option-{{ option.position }}"
+            {% if value.selected %}
+              checked
+            {% endif %}
             value="{{ value.selected }}"
             data-option-id="{{ value.id }}"
           >
