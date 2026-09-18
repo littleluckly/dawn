@@ -2,7 +2,7 @@
 <p>section.id: {{ section.id }}</p>
 <p>product.handle: {{ product.handle }}</p>
 <p>product.url: {{ product.url }}</p>
-<p>request: {{ request | json }}</p>
+<p>request.origin: {{ request.origin }}</p>
 <div class="product-card">
   <div class="product-card--left">
     <div class="product-card--feature-media">
@@ -50,6 +50,12 @@
           return checkedInput.value;
         });
         console.log('Selected options:', selectedOptions);
+        fetch(`{{ request.origin }}{{ product.url }}?section_id={{ section.id }}&variant=${selectedOptions.join('&')}`)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log('Variant data:', data);
+            // Update the product card with the new variant data
+          });
       });
     });
   </script>
