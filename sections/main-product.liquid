@@ -1,7 +1,10 @@
-product.id {{ product.id }}
+product.id :{{ product.id }}
 <hr />
-product.title {{ product.title }} product.handle {{ product.handle }} product.description
-{{ product.description }}
+product.title :{{ product.title }}
+<hr />
+product.handle :{{ product.handle }}
+<hr />
+product.description :{{ product.description }}
 <script>
   console.log('product', {{ product | json }});
 </script>
