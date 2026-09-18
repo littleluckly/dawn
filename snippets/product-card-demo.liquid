@@ -3,6 +3,13 @@
 <p>product.handle: {{ product.handle }}</p>
 <p>product.url: {{ product.url }}</p>
 <p>request.origin: {{ request.origin }}</p>
+<script data-selected-variant>
+  {
+    {
+      product.select_or_first_available_variant | json;
+    }
+  }
+</script>
 <div class="product-card">
   <div class="product-card--left">
     <div class="product-card--feature-media">
