@@ -37,3 +37,15 @@
       {% endfor %}
     </fieldset>
   </div>
+  <script>
+    document.querySelectorAll('.product-card--variant-options input[type="radio"]').forEach(function (input) {
+      input.addEventListener('change', function () {
+        const selectedOptions = Array.from(
+          document.querySelectorAll('.product-card--variant-options input[type="radio"]:checked')
+        ).map(function (checkedInput) {
+          return checkedInput.value;
+        });
+        console.log('Selected options:', selectedOptions);
+      });
+    });
+  </script>
