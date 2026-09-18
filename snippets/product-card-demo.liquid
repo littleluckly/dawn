@@ -1,7 +1,9 @@
 <div>
   {{ product.title }}
 </div>
-
+{% for media in product.media limit: 4 %}
+  {{ media | media_tag }}
+{% endfor %}
 <div>
   {% if product.compare_at_price %}
     <del class="product-price--compare">{{ product.compare_at_price | money }}</del>
