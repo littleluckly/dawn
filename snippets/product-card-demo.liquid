@@ -3,6 +3,8 @@
 <p>product.handle: {{ product.handle }}</p>
 <p>product.url: {{ product.url }}</p>
 <p>request.origin: {{ request.origin }}</p>
+<p>product.available: {{ product.available }}</p>
+<p>product.variants.first: {{ product.variants.first | json }}</p>
 <p>{{ product.select_or_first_available_variant | json }};</p>
 <script type="application/json" data-selected-variant>
   {{ product.select_or_first_available_variant | json }};
