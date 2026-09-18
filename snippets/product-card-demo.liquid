@@ -11,7 +11,7 @@
     <div class="product-card--medias">
       {% for media in product.media %}
         <div class="product-card--media">
-          {{ media | media_img_tag: '100x100' }}
+          {{ media | image_url | media_img_tag: '100x100' }}
         </div>
       {% endfor %}
     </div>
