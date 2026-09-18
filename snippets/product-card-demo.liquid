@@ -5,6 +5,7 @@
 <div>
   {% if product.compare_at_price %}
     <del>{{ product.compare_at_price | money }}</del>
+    <span class="product-price--sale">{{ product.price | money }}</span>
   {% endif %}
   {{ product.price }}
 </div>
