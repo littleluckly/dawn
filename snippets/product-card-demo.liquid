@@ -1,14 +1,9 @@
-<div>
-  {{ product.title }}
-</div>
-{% for media in product.media limit: 4 %}
-  {{ media | media_tag }}
-{% endfor %}
-<div>
-  {% if product.compare_at_price %}
-    <del class="product-price--compare">{{ product.compare_at_price | money }}</del>
-    <span class="product-price--sale">{{ product.price | money }}</span>
-  {% else %}
-    <span class="product-price">{{ product.price | money }}</span>
-  {% endif %}
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
+<div class="product-card">
+  <div class="product-card--left">
+    <div class="product-card--feature-media">
+      {{ product.selected_or_first_available_variant.featured_image }}
+    </div>
+  </div>
+  <div class="product-card--right"></div>
 </div>
