@@ -2,7 +2,11 @@
 <div class="product-card">
   <div class="product-card--left">
     <div class="product-card--feature-media">
-      {{ product.selected_or_first_available_variant.featured_image }}
+      {{
+        product.selected_or_first_available_variant.featured_image
+        | product_img_url: '480x480'
+        | img_tag: product.title
+      }}
     </div>
   </div>
   <div class="product-card--right"></div>
