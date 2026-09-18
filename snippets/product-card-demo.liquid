@@ -24,18 +24,16 @@
   <div class="product-card--right">
     <fieldset class="product-card--variant-options">
       {% for option in product.options_with_values %}
-        <div class="product-card--option">
-          <legend>{{ option.name }}</legend>
-          {% for value in option.values %}
-            <input
-              type="radio"
-              id="option-{{ option.position }}-{{ value }}"
-              name="option-{{ option.position }}"
-              value="{{ value }}"
-            >
-            <label for="option-{{ option.position }}-{{ value.name }}">{{ value }}--{{ value.id }}</label>
-          {% endfor %}
-        </div>
+        <legend>{{ option.name }}</legend>
+        {% for value in option.values %}
+          <input
+            type="radio"
+            id="option-{{ option.position }}-{{ value }}"
+            name="option-{{ option.position }}"
+            value="{{ value }}"
+          >
+          <label for="option-{{ option.position }}-{{ value.name }}">{{ value }}--{{ value.id }}</label>
+        {% endfor %}
       {% endfor %}
     </fieldset>
   </div>
