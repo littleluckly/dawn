@@ -30,9 +30,9 @@
             type="radio"
             id="option-{{ option.position }}-{{ value }}"
             name="option-{{ option.position }}"
-            value="{{ value }}"
+            value="{{ value.selected }}"
           >
-          <label for="option-{{ option.position }}-{{ value.name }}">{{ value }}--{{ value.id }}</label>
+          <label for="option-{{ option.position }}-{{ value.name }}">{{ value }}ß</label>
         {% endfor %}
       {% endfor %}
     </fieldset>
