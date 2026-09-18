@@ -8,7 +8,13 @@
         | img_tag: product.title
       }}
     </div>
-    <div class="product-card--medias"></div>
+    <div class="product-card--medias">
+      {% for media in product.media %}
+        <div class="product-card--media">
+          {{ media | media_img_tag: '100x100' }}
+        </div>
+      {% endfor %}
+    </div>
   </div>
   <div class="product-card--right"></div>
 </div>
