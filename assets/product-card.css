@@ -10,13 +10,13 @@
   justify-content: center;
   align-items: center;
 }
-.product-card--right{
-  width: 30%;
-  min-width: 300px;
-}
 .product-card--medias {
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
   overflow-x: auto;
+}
+.product-card--right{
+  width: 30%;
+  min-width: 300px;
 }
