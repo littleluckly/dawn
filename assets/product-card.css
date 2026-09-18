@@ -1,0 +1,17 @@
+.product-card {
+  display: flex;
+}
+.product-card--left{
+  width: 70%;
+  min-width:600px;
+}
+.product-card--right{
+  width: 30%;
+  min-width: 300px;
+}
+.product-card--medias {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
