@@ -1,13 +1,4 @@
-product.id :{{ product.id }}
-<hr />
-product.title :{{ product.title }}
-<hr />
-product.handle :{{ product.handle }}
-<hr />
-product.description :{{ product.description }}
-<hr />
-product.media-2 :{{ product.media.first | json }}
-<img src="{{ product.media.first.src | img_url }}" />
+{{ product.media.first | media_tag: 'product-card__media', 'product-card__media--hover' }}
 <script>
   console.log('product', {{ product | json }});
 </script>
