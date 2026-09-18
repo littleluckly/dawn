@@ -10,6 +10,7 @@
       {% assign variant_images = product.media | where: 'media_type', 'image' | map: 'src' %}
       <script>
         console.log('variant_images', {{ variant_images | json }});
+        console.log('options_with_values', {{ product.options_with_values | json }});
       </script>
     </div>
     <div class="product-card--medias">
