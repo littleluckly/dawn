@@ -22,10 +22,10 @@
     </div>
   </div>
   <div class="product-card--right">
-    <div class="product-card--variant-options">
+    <fieldset class="product-card--variant-options">
       {% for option in product.options_with_values %}
         <div class="product-card--option">
-          <div>{{ option.name }}</div>
+          <legend>{{ option.name }}</legend>
           {% for value in option.values %}
             <input
               type="radio"
@@ -37,5 +37,5 @@
           {% endfor %}
         </div>
       {% endfor %}
-    </div>
+    </fieldset>
   </div>
