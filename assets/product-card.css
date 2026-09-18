@@ -4,6 +4,7 @@
 .product-card--left{
   width: 70%;
   min-width:600px;
+  padding: 4px;
 }
 .product-card--feature-media {
   display: flex;
