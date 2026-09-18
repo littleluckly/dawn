@@ -5,6 +5,8 @@ product.title :{{ product.title }}
 product.handle :{{ product.handle }}
 <hr />
 product.description :{{ product.description }}
+<hr />
+product.media :{{ product.media.first | json }}
 <script>
   console.log('product', {{ product | json }});
 </script>
