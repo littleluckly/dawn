@@ -33,6 +33,7 @@
       {% for option in product.options_with_values %}
         <legend>{{ option.name }}</legend>
         {% for value in option.values %}
+          value.selected{{ value.selected }}
           <input
             type="radio"
             id="option-{{ option.position }}-{{ value }}"
