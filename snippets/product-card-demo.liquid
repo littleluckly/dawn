@@ -5,6 +5,7 @@
 <p>request.origin: {{ request.origin }}</p>
 <p>product.available: {{ product.available }}</p>
 <p>product.variants.first: {{ product.variants.first | json }}</p>
+<p>product.variants.first.inventory_quantity: {{ product.variants.first.inventory_quantity }}</p>
 <p>{{ product.select_or_first_available_variant | json }};</p>
 <script type="application/json" data-selected-variant>
   {{ product.select_or_first_available_variant | json }};
