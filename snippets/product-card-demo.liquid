@@ -51,7 +51,7 @@
         const selectedOptions = Array.from(
           document.querySelectorAll('.product-card--variant-options input[type="radio"]:checked')
         ).map(function (checkedInput) {
-          return checkedInput.value;
+          return checkedInput.dataset.optionId;
         });
         console.log('Selected options:', selectedOptions);
         fetch(
