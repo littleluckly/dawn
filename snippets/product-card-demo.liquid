@@ -35,8 +35,12 @@
             id="option-{{ option.position }}-{{ value }}"
             name="option-{{ option.position }}"
             value="{{ value.selected }}"
+            data-option-id="{{ value.id }}"
           >
-          <label for="option-{{ option.position }}-{{ value.name }}">{{ value }}</label>
+          <label for="option-{{ option.position }}-{{ value.name }}">
+            {{- value -}}
+            {{- value.id -}}
+          </label>
         {% endfor %}
       {% endfor %}
     </fieldset>
