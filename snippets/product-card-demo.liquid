@@ -50,7 +50,9 @@
           return checkedInput.value;
         });
         console.log('Selected options:', selectedOptions);
-        fetch(`{{ request.origin }}{{ product.url }}?section_id={{ section.id }}&variant=${selectedOptions.join('&')}`)
+        fetch(
+          `{{ request.origin }}{{ product.url }}?section_id={{ section.id }}&option_values=${selectedOptions.join(',')}`
+        )
           .then((response) => response.json())
           .then((data) => {
             console.log('Variant data:', data);
