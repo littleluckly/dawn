@@ -7,6 +7,7 @@ product.handle :{{ product.handle }}
 product.description :{{ product.description }}
 <hr />
 product.media :{{ product.media.first | json }}
+<img src="{{ product.media.first.preview_image | img_url: '100x100' }}" />
 <script>
   console.log('product', {{ product | json }});
 </script>
