@@ -18,5 +18,17 @@
       {% endfor %}
     </div>
   </div>
-  <div class="product-card--right"></div>
-</div>
+  <div class="product-card--right">
+    <div class="product-card--variant-options">
+      {% for option in product.options_with_values %}
+        <div class="product-card--option">
+          <label>{{ option.name }}</label>
+          <select name="option-{{ option.position }}">
+            {% for value in option.values %}
+              <option value="{{ value }}">{{ value }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
