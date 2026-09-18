@@ -27,7 +27,13 @@
         <div class="product-card--option">
           <label>{{ option.name }}</label>
           {% for value in option.values %}
-            <option value="{{ value }}">{{ value }}--{{ value.id }}</option>
+            <input
+              type="radio"
+              id="option-{{ option.position }}-{{ value }}"
+              name="option-{{ option.position }}"
+              value="{{ value }}"
+            >
+            <label for="option-{{ option.position }}-{{ value }}">{{ value }}--{{ value.id }}</label>
           {% endfor %}
         </div>
       {% endfor %}
