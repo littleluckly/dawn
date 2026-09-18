@@ -1,4 +1,6 @@
-{% render 'product-card-demo', section: section %}
-<script>
-  console.log('product', {{ product | json }});
-</script>
+<div>
+  {% render 'product-card-demo', section: section %}
+  <script>
+    console.log('product', {{ product | json }});
+  </script>
+</div>
