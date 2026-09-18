@@ -7,7 +7,8 @@
         | product_img_url: '480x480'
         | img_tag: product.title
       }}
-      {% assign variant_images = product.media | where: 'attached_to_variant?', true | map: 'src' %}
+      {% assign variant_images = product.media | where: 'media_type', 'image' | map: 'src' %}
+      {{ variant_images | json }}
     </div>
     <div class="product-card--medias">
       {% for media in product.media %}
