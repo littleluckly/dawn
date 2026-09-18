@@ -5,6 +5,11 @@
   width: 70%;
   min-width:600px;
 }
+.product-card--feature-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .product-card--right{
   width: 30%;
   min-width: 300px;
