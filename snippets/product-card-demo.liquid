@@ -1,0 +1,10 @@
+<div>
+  {{ product.title }}
+</div>
+
+<div>
+  {% if product.compare_at_price %}
+    <del>{{ product.compare_at_price | money }}</del>
+  {% endif %}
+  {{ product.price }}
+</div>
