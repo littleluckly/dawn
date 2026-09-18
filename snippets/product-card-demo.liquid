@@ -25,7 +25,7 @@
     <div class="product-card--variant-options">
       {% for option in product.options_with_values %}
         <div class="product-card--option">
-          <label>{{ option.name }}</label>
+          <div>{{ option.name }}</div>
           {% for value in option.values %}
             <input
               type="radio"
